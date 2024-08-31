@@ -1,0 +1,17 @@
+name: BanPlugin
+version: '${project.version}'
+main: com.finalwindserver.banplugin.TempBanPlugin
+api-version: '1.20'
+commands:
+  tempban:
+    description: Temporarily ban a player
+    usage: /<command> <player> <hours>
+  unban:
+    description: Unban a player
+    usage: /<command> <player>
+  unbanip:
+    description: Unban an ip
+    usage: /<command> <ip>
+  tempbanip:
+    description: Ban an ip
+    usage: /<command> <ip>
