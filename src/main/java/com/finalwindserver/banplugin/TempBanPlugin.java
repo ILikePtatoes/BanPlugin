@@ -54,7 +54,7 @@ public class TempBanPlugin extends JavaPlugin implements CommandExecutor, Listen
         } else if (label.equalsIgnoreCase("unban")) {
             return handleUnban(sender, args);
         } else if (label.equalsIgnoreCase("unbanip")) {
-            return handleUnbanIP(sender, args);  // Handle unbanip command
+            return handleUnbanIP(sender, args);
         }
         return false;
     }
@@ -68,7 +68,7 @@ public class TempBanPlugin extends JavaPlugin implements CommandExecutor, Listen
         OfflinePlayer offlinePlayer = getServer().getOfflinePlayer(args[0]);
 
         long durationMillis = parseDuration(args[1], sender);
-        if (durationMillis == -1) return true; // Invalid duration provided
+        if (durationMillis == -1) return true;
 
         UUID playerId = offlinePlayer.getUniqueId();
         long unbanTime = System.currentTimeMillis() + durationMillis;
@@ -88,7 +88,7 @@ public class TempBanPlugin extends JavaPlugin implements CommandExecutor, Listen
         }
         String ip = args[0];
         long durationMillis = parseDuration(args[1], sender);
-        if (durationMillis == -1) return true; // Invalid duration provided
+        if (durationMillis == -1) return true;
 
         long unbanTime = System.currentTimeMillis() + durationMillis;
         bannedIPs.put(ip, unbanTime);
